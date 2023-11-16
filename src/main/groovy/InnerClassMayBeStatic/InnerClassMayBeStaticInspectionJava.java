@@ -9,7 +9,7 @@ class InnerClassMayBeStaticInspectionJava {
         new InnerClass().foo();
     }
 
-    class InnerClass {
+    private class InnerClass {
         void foo() {
             System.out.println("foo");
         }

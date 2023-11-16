@@ -12,7 +12,7 @@ class InnerClassMayBeStaticInspectionGroovy {
         new InnerClass().foo()
     }
 
-    class InnerClass {
+    private class InnerClass {
         void foo() {
             println 'foo'
         }
