@@ -1,2 +1,5 @@
-# jetbrains-bug-reports
-A repository hosting reproduction cases for bug reports and feature requests for JetBrains IDEs
+## Elvis assignment operator inspection
+Houses code for testing a new Groovy inspection in IntelliJ that converts [elvis assignment operator](https://www.groovy-lang.org/operators.html#_elvis_assignment_operator) candidates.
+
+- Source file: `src/main/groovy/ElvisAssignmentOperatorInspection.groovy`
+- Run with: `gradlew run`
