@@ -12,5 +12,5 @@ dependencies {
 }
 
 application {
-    mainClassName = 'ElvisAssignmentOperatorInspection'
+    mainClassName = 'SafeNavigationOperatorInspection'
 }
