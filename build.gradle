@@ -1,16 +1,28 @@
 plugins {
-    id 'groovy'
+    id 'java'
     id 'application'
+    id 'maven-publish'
 }
+
+version = '1.0.0'
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation 'org.apache.groovy:groovy:4.0.15'
+application {
+    mainClassName = 'io.github.paintninja.jetbrains_reports.publishing_dsl.App'
 }
 
-application {
-    mainClassName = 'ElvisAssignmentOperatorInspection'
+publishing {
+    publications {
+        // 'maven' cannot be applied to '(java.lang.Class<org.gradle.api.publish.maven.MavenPublication>, groovy.lang.Closure<org.gradle.api.publish.Publication>)'
+        maven(MavenPublication) { // missing closure param type hint "MavenPublication it ->"
+            groupId = 'io.github.paintninja.jetbrains_reports' // Cannot assign 'String' to 'Publication' but the method takes a String
+            artifactId = 'publishing_dsl' // Cannot assign 'String' to 'Publication' but the method takes a String
+            version = project.version // No candidates found for method call project.version, but it exists
+
+            from components.java // Cannot infer argument types
+        }
+    }
 }

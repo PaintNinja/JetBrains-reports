@@ -1,5 +1,9 @@
-## Elvis assignment operator inspection
-Houses code for testing a new Groovy inspection in IntelliJ that converts [elvis assignment operator](https://www.groovy-lang.org/operators.html#_elvis_assignment_operator) candidates.
+## Gradle publishing DSL
+Houses code for reproducing a bug with the Gradle publishing Groovy DSL in IntelliJ.
 
-- Source file: `src/main/groovy/ElvisAssignmentOperatorInspection.groovy`
-- Run with: `gradlew run`
+Lots of IDE errors and warnings are shown in the IDE; however, publishing works fine:
+![img.png](images/dsl.png)
+![img_1.png](images/published_files.png)
+
+- Buildscript: `build.gradle`
+- Publish with: `gradlew publishToMavenLocal`
