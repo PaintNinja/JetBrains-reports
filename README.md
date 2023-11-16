@@ -1,2 +1,5 @@
-# jetbrains-bug-reports
-A repository hosting reproduction cases for bug reports and feature requests for JetBrains IDEs
+## Spread operator inspection
+Houses code for testing a new Groovy inspection in IntelliJ that converts a simple `collect` call to a spread operator.
+
+- Source file: `src/main/groovy/SpreadOperatorInspection.groovy`
+- Run with: `gradlew run`
