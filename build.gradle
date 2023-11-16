@@ -12,5 +12,5 @@ dependencies {
 }
 
 application {
-    mainClassName = 'SafeNavigationOperatorInspection'
+    mainClassName = 'LazyAnnotationInspection.Before1'
 }
